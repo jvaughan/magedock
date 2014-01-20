@@ -1,0 +1,12 @@
+# Manage Puppet module dependencies with librarian-puppet
+
+forge 'http://forge.puppetlabs.com'
+
+mod 'supervisor',
+  :git => 'https://github.com/eventbrite/puppet-supervisor.git'
+
+mod 'puppetlabs/git'
+
+mod "docker",
+    :git => "https://github.com/jvaughan/garethr-docker.git",
+    :ref => "exp-build-from-dockerfile"
