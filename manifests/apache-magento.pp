@@ -1,23 +1,5 @@
 include 'docker'
 
-
-
-#exec { 'build apache-magento':
-#  command   => "/usr/bin/docker build -t jvaughan/apache-magento .",
-#  cwd       => "/vagrant/docker/apache-magento"
-#}
-#
-#exec {'clear-shit-out':
-#  #command => "/usr/local/bin/killshit.sh"
-#  command => "/bin/ls"
-#}
-
-
-#docker::build { 'thingy':
-#  image_name  => 'jvaughan/apache-magento',
-#  df_dir      => '/vagrant/docker/apache-magento'
-#}
-
 docker::image { 'jvaughan/apache-magento':
   ensure                => 'present',
   build_from_dockerfile => true,
